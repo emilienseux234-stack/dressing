@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dressing</title>
+
+  <!-- PWA / iPhone -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Dressing">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header class="app-header">
+    <h1 class="logo">DRESSING</h1>
+  </header>
+
+  <!-- Écrans -->
+  <main class="app-main">
+
+    <section id="screen-dressing" class="screen active" aria-labelledby="t-dressing">
+      <h2 id="t-dressing" class="screen-title">DRESSING</h2>
+      <p class="screen-sub">VOTRE COLLECTION</p>
+      <div class="empty">
+        <p>AUCUNE PIÈCE POUR LE MOMENT</p>
+      </div>
+    </section>
+
+    <section id="screen-ajouter" class="screen" aria-labelledby="t-ajouter">
+      <h2 id="t-ajouter" class="screen-title">AJOUTER</h2>
+      <p class="screen-sub">NOUVELLE PIÈCE</p>
+      <div class="empty">
+        <p>BIENTÔT DISPONIBLE</p>
+      </div>
+    </section>
+
+    <section id="screen-tenue" class="screen" aria-labelledby="t-tenue">
+      <h2 id="t-tenue" class="screen-title">TENUE DU JOUR</h2>
+      <p class="screen-sub">SUGGESTION</p>
+      <div class="empty">
+        <p>BIENTÔT DISPONIBLE</p>
+      </div>
+    </section>
+
+    <section id="screen-favoris" class="screen" aria-labelledby="t-favoris">
+      <h2 id="t-favoris" class="screen-title">FAVORIS</h2>
+      <p class="screen-sub">VOS TENUES PRÉFÉRÉES</p>
+      <div class="empty">
+        <p>AUCUN FAVORI</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Barre de navigation -->
+  <nav class="tabbar" aria-label="Navigation principale">
+    <button class="tab active" data-screen="dressing" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a2 2 0 0 1 2 2c0 1-1 1.5-2 2.2V9l9 6.5V18H3v-2.5L12 9"/></svg>
+      <span>DRESSING</span>
+    </button>
+    <button class="tab" data-screen="ajouter" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      <span>AJOUTER</span>
+    </button>
+    <button class="tab" data-screen="tenue" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 4 6l2 4 2-1v12h8V9l2 1 2-4-4-3c-.5 1.5-2 2.5-4 2.5S8.5 4.5 8 3Z"/></svg>
+      <span>TENUE</span>
+    </button>
+    <button class="tab" data-screen="favoris" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+      <span>FAVORIS</span>
+    </button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
