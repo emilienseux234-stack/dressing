@@ -1,10 +1,11 @@
 // Change ce numéro à chaque mise à jour de l'app pour forcer le rafraîchissement
-const CACHE = 'dressing-v1';
+const CACHE = 'dressing-v2';
 
 const FILES = [
   './',
   './index.html',
   './style.css',
+  './config.js',
   './app.js',
   './manifest.json',
   './icons/icon-192.png',
@@ -28,9 +29,14 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// Requêtes : réseau d'abord, cache si hors ligne
+// Requêtes
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
+
+  // Supabase (données + photos) : toujours le réseau, jamais le cache
+  if (event.request.url.includes('.supabase.co')) return;
+
+  // Reste de l'app : réseau d'abord, cache si hors ligne
   event.respondWith(
     fetch(event.request)
       .then(response => {

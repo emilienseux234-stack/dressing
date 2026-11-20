@@ -30,33 +30,26 @@
     <section id="screen-dressing" class="screen active" aria-labelledby="t-dressing">
       <h2 id="t-dressing" class="screen-title">DRESSING</h2>
       <p class="screen-sub">VOTRE COLLECTION</p>
-      <div class="empty">
-        <p>AUCUNE PIÈCE POUR LE MOMENT</p>
-      </div>
+      <p id="db-status" class="db-status">CONNEXION…</p>
+      <div class="empty"><p>AUCUNE PIÈCE POUR LE MOMENT</p></div>
     </section>
 
     <section id="screen-ajouter" class="screen" aria-labelledby="t-ajouter">
       <h2 id="t-ajouter" class="screen-title">AJOUTER</h2>
       <p class="screen-sub">NOUVELLE PIÈCE</p>
-      <div class="empty">
-        <p>BIENTÔT DISPONIBLE</p>
-      </div>
+      <div class="empty"><p>BIENTÔT DISPONIBLE</p></div>
     </section>
 
     <section id="screen-tenue" class="screen" aria-labelledby="t-tenue">
       <h2 id="t-tenue" class="screen-title">TENUE DU JOUR</h2>
       <p class="screen-sub">SUGGESTION</p>
-      <div class="empty">
-        <p>BIENTÔT DISPONIBLE</p>
-      </div>
+      <div class="empty"><p>BIENTÔT DISPONIBLE</p></div>
     </section>
 
     <section id="screen-favoris" class="screen" aria-labelledby="t-favoris">
       <h2 id="t-favoris" class="screen-title">FAVORIS</h2>
       <p class="screen-sub">VOS TENUES PRÉFÉRÉES</p>
-      <div class="empty">
-        <p>AUCUN FAVORI</p>
-      </div>
+      <div class="empty"><p>AUCUN FAVORI</p></div>
     </section>
 
   </main>
@@ -81,6 +74,9 @@
     </button>
   </nav>
 
+  <!-- Bibliothèque Supabase (CDN), puis paramètres, puis l'app -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

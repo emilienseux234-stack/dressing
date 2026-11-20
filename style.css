@@ -100,6 +100,18 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   color: var(--muted);
 }
 
+/* ===== Statut de connexion (module 2B) ===== */
+.db-status {
+  margin-top: 16px;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  color: var(--muted);
+  text-transform: uppercase;
+  word-break: break-word;
+}
+.db-status.ok    { color: #2e7d32; }
+.db-status.error { color: #c62828; }
+
 /* ===== Barre de navigation (gère la barre du bas) ===== */
 .tabbar {
   position: fixed;
@@ -134,10 +146,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   stroke-linejoin: round;
 }
 
-.tab span {
-  font-size: 9px;
-  letter-spacing: 0.2em;
-}
+.tab span { font-size: 9px; letter-spacing: 0.2em; }
 
 .tab.active { color: var(--text); }
 .tab.active span { font-weight: 500; }
